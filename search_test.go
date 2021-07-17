@@ -28,10 +28,10 @@ func TestIndexAndSearch(t *testing.T) {
 	assert.NotNil(t, res2, "word \"some\" was not ok")
 
 	res3 := sch.Search("include hello")
-	assert.NotNil(t, res3)
+	assert.NotNil(t, res3, "two words search not working")
 
-	res4 := sch.Search("ok fine")
-	assert.NotNil(t, res4)
+	res4 := sch.Search("ok fine words")
+	assert.NotNil(t, res4, "three words search not working")
 
 	res5 := sch.Search("ok fine suu")
 	assert.Nil(t, res5)
